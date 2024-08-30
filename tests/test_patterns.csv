@@ -1,0 +1,10 @@
+ID,input,expected
+params0,"<30|A>","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+params1,"<4|A>","AAAA"
+params2,"<2|B>","BB"
+params3,"<3|<2|B>A>","BBABBABBA"
+params4,"<0|A>",""
+params5,"<0|AB>",""
+params6,"<3|<12|B>A","[ValueError] Invalid input: <3|<12|B>A"
+params7,"<2|<1|C>","[ValueError] Invalid input: <2|<1|C>"
+params8,"<<2|C>>","[ValueError] Invalid input: <<2|C>>"
