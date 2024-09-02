@@ -1,0 +1,35 @@
+INFO     test_expression:test_expression.py:31 Result for input: <30|A> is AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+INFO     test_expression:test_expression.py:40 Test succeeded for input: <30|A>
+INFO     test_expression:test_expression.py:31 Result for input: <4|A> is AAAA
+INFO     test_expression:test_expression.py:40 Test succeeded for input: <4|A>
+INFO     test_expression:test_expression.py:31 Result for input: <2|B> is BB
+INFO     test_expression:test_expression.py:40 Test succeeded for input: <2|B>
+INFO     test_expression:test_expression.py:31 Result for input: <3|<2|B>A> is BBABBABBA
+INFO     test_expression:test_expression.py:40 Test succeeded for input: <3|<2|B>A>
+INFO     test_expression:test_expression.py:31 Result for input: <3|<2|B><2|A>> is [ValueError] Invalid input: <3|<2|B><2|A>>
+ERROR    test_expression:test_expression.py:43 Test failed for input: <3|<2|B><2|A>> with error: Expected BBAABBAABBAA, got [ValueError] Invalid input: <3|<2|B><2|A>>
+assert '[ValueError] Invalid input: <3|<2|B><2|A>>' == 'BBAABBAABBAA'
+  
+  - BBAABBAABBAA
+  + [ValueError] Invalid input: <3|<2|B><2|A>>
+INFO     test_expression:test_expression.py:31 Result for input: <3|<2|B>C<2|A>> is [ValueError] Invalid input: <3|<2|B>C<2|A>>
+ERROR    test_expression:test_expression.py:43 Test failed for input: <3|<2|B>C<2|A>> with error: Expected BBCAABBCAABBCAA, got [ValueError] Invalid input: <3|<2|B>C<2|A>>
+assert '[ValueError] Invalid input: <3|<2|B>C<2|A>>' == 'BBCAABBCAABBCAA'
+  
+  - BBCAABBCAABBCAA
+  + [ValueError] Invalid input: <3|<2|B>C<2|A>>
+INFO     test_expression:test_expression.py:31 Result for input: <0|A> is 
+INFO     test_expression:test_expression.py:40 Test succeeded for input: <0|A>
+INFO     test_expression:test_expression.py:31 Result for input: <0|AB> is 
+INFO     test_expression:test_expression.py:40 Test succeeded for input: <0|AB>
+INFO     test_expression:test_expression.py:31 Result for input: <3|<12|B>A is [ValueError] Invalid input: <3|<12|B>A
+INFO     test_expression:test_expression.py:40 Test succeeded for input: <3|<12|B>A
+INFO     test_expression:test_expression.py:31 Result for input: <2|<1|C> is [ValueError] Invalid input: <1|
+ERROR    test_expression:test_expression.py:43 Test failed for input: <2|<1|C> with error: Expected [ValueError] Invalid input: <2|<1|C>, got [ValueError] Invalid input: <1|
+assert '[ValueError] Invalid input: <1|' == '[ValueError] Invalid input: <2|<1|C>'
+  
+  - [ValueError] Invalid input: <2|<1|C>
+  ?                             ---   --
+  + [ValueError] Invalid input: <1|
+INFO     test_expression:test_expression.py:31 Result for input: <<2|C>> is [ValueError] Invalid input: <<2|C>>
+INFO     test_expression:test_expression.py:40 Test succeeded for input: <<2|C>>
